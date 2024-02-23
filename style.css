@@ -4,13 +4,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Alata";
 }
 html,
 body {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
+}
+.container {
+  padding: 0 20px;
 }
 /* _ */
 /* Header */
@@ -21,8 +23,10 @@ header {
   background-size: cover;
   position: relative;
   height: 100vh;
+  margin-bottom: 80px;
 }
 header .container {
+  padding-top: 20px;
   position: relative;
   height: 70%;
   width: 100%;
@@ -30,19 +34,55 @@ header .container {
   flex-direction: column;
   justify-content: space-between;
 }
-header .navbar {
+header .container .navbar {
   display: flex;
   justify-content: space-between;
+  font-family: "Alata";
 }
-header .navbar .navbar-brand {
+header .container .navbar .navbar-brand {
   color: hsl(0, 0%, 100%);
   font-size: 1.7rem;
+  position: relative;
+  z-index: 20;
 }
-header .navbar .menu {
+header .container .navbar .menu-list {
   display: none;
 }
-header .navbar .menu-btn {
+header .container .navbar .menu-btn {
   all: unset;
+  position: relative;
+  z-index: 20;
+}
+header .container .menu {
+  display: none;
+}
+header .container .menu.active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background-color: hsl(0, 0%, 0%);
+  display: flex;
+  align-items: center;
+}
+header .container .menu.active .menu-list {
+  list-style: none;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  padding-left: 15px;
+}
+header .container .menu.active .menu-list a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 header .hero {
   width: 100%;
