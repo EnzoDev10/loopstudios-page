@@ -1,8 +1,59 @@
+/* Colors */
+/* General Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Alata";
+}
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+/* _ */
+/* Header */
+header {
+  background-image: url(images/mobile/image-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+}
+header .container {
+  position: relative;
+  height: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+}
+header .navbar .navbar-brand {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.7rem;
+}
+header .navbar .menu {
+  display: none;
+}
+header .navbar .menu-btn {
+  all: unset;
+}
+header .hero {
+  width: 100%;
+}
+header .hero p {
+  color: hsl(0, 0%, 100%);
+  font-family: "Josefin Sans";
+  font-size: 2rem;
+  font-weight: 300;
+  border: 2px solid hsl(0, 0%, 100%);
+  padding: 15px;
 }
 .attribution {
   font-size: 11px;
