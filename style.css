@@ -14,6 +14,10 @@ body {
 .container {
   padding: 0 20px;
 }
+.logo {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.7rem;
+}
 /* _ */
 /* Header */
 header {
@@ -40,8 +44,6 @@ header .container .navbar {
   font-family: "Alata";
 }
 header .container .navbar .navbar-brand {
-  color: hsl(0, 0%, 100%);
-  font-size: 1.7rem;
   position: relative;
   z-index: 20;
 }
@@ -136,8 +138,9 @@ header .hero p {
   font-size: 1.3em;
   color: hsl(0, 0%, 100%);
   z-index: 10;
-  /* Break text into two lines without using a br tag */
-  width: 28%;
+}
+#products .container .grid-container .grid-item p .break {
+  display: block;
 }
 #products .container .grid-btn {
   font-family: "Alata";
@@ -149,10 +152,58 @@ header .hero p {
   color: hsl(0, 0%, 0%);
   padding: 15px 45px;
 }
-.attribution {
-  font-size: 11px;
+#support {
+  width: 100%;
+  background-color: hsl(0, 0%, 0%);
+}
+#support .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+#support .container .footer-menu {
+  list-style: none;
   text-align: center;
+  padding: 0;
+}
+#support .container .footer-menu .footer-item {
+  margin-bottom: 10px;
+}
+#support .container .footer-menu .footer-item a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+#support .container .socials {
+  display: flex;
+  gap: 15px;
+}
+#support .container .copy {
+  color: hsl(0, 0%, 55%);
+}
+.attribution {
+  padding-bottom: 20px;
+  width: 90%;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: hsl(0, 0%, 55%);
+}
+.attribution p {
+  margin: 10px 0;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(0, 0%, 100%);
+  padding: 0 -0.25em;
+  margin: 0 -0.25em;
+  text-decoration: none;
+  box-shadow: inset 0 0 0 0;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.attribution a:hover,
+.attribution a:focus {
+  outline: thin dotted;
+  color: hsl(0, 0%, 100%);
+  box-shadow: inset 200px 0 0 0 hsl(305, 53%, 37%);
 }

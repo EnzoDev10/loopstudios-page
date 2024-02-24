@@ -4,6 +4,7 @@
 @Black: hsl(0, 0%, 0%);
 @Dark-Gray: hsl(0, 0%, 55%);
 @Very-Dark-Gray: hsl(0, 0%, 41%);
+@Attribute-color:hsl(305, 53%, 37%);
 
 /* General Styles */
 
@@ -22,6 +23,11 @@ body {
 
 .container {
 	padding: 0 20px;
+}
+
+.logo {
+	color: @White;
+	font-size: 1.7rem;
 }
 
 /* _ */
@@ -53,12 +59,9 @@ header {
 			font-family: "Alata";
 
 			.navbar-brand {
-				color: @White;
-				font-size: 1.7rem;
 				position: relative;
 				z-index: 20;
 			}
-
 
 			.menu-list {
 				display: none;
@@ -70,7 +73,6 @@ header {
 				z-index: 20;
 			}
 		}
-
 
 		.menu {
 			display: none;
@@ -126,7 +128,6 @@ header {
 
 #about {
 	.container {
-
 		display: flex;
 		flex-direction: column;
 		gap: 50px;
@@ -151,8 +152,7 @@ header {
 		justify-content: center;
 		align-items: center;
 		gap: 30px;
-		font-family:"Josefin Sans", sans-serif;
-
+		font-family: "Josefin Sans", sans-serif;
 
 		h3 {
 			font-size: 1.9rem;
@@ -173,8 +173,10 @@ header {
 					font-size: 1.3em;
 					color: @White;
 					z-index: 10;
-					/* Break text into two lines without using a br tag */
-					width: 28%;
+
+					.break {
+						display: block;
+					}
 				}
 			}
 		}
@@ -189,14 +191,74 @@ header {
 			color: @Black;
 			padding: 15px 45px;
 		}
-	
 	}
 }
 
-.attribution {
-	font-size: 11px;
-	text-align: center;
+#support {
+	width: 100%;
+	background-color: @Black;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 25px;
+		
+		.footer-menu {
+			list-style: none;
+			text-align: center;
+			padding: 0;
+			
+
+			.footer-item {
+				margin-bottom: 10px;
+
+				a {
+					color:@White;
+					text-decoration: none;
+				}
+			}
+		}
+
+		.socials {
+			display: flex;
+			gap: 15px;
+		}
+
+		.copy {
+			color: @Dark-Gray;
+		}
+
+
+	}
 }
+
+ .attribution {
+	padding-bottom: 20px;
+	width: 90%;
+	text-align: center;
+	letter-spacing: 2px;
+	font-weight: 700;
+	color: @Dark-Gray;
+}
+
+.attribution p {
+	margin: 10px 0;
+}
+
 .attribution a {
-	color: hsl(228, 45%, 44%);
+	color: @White;
+	padding: 0 -0.25em;
+	margin: 0 -0.25em;
+	text-decoration: none;
+	box-shadow: inset 0 0 0 0;
+	transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.attribution a:hover,
+.attribution a:focus {
+	outline: thin dotted;
+	color: @White;
+	box-shadow: inset 200px 0 0 0 @Attribute-color;
 }
