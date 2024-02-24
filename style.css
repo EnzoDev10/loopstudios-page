@@ -95,6 +95,21 @@ header .hero p {
   border: 2px solid hsl(0, 0%, 100%);
   padding: 15px;
 }
+/* About */
+#about .container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+#about .container h1 {
+  font-size: 1.9rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+#about .container p {
+  color: hsl(0, 0%, 55%);
+  padding: 0 20px;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
