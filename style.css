@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Alata", sans-serif;
 }
 html,
 body {
@@ -41,7 +42,6 @@ header .container {
 header .container .navbar {
   display: flex;
   justify-content: space-between;
-  font-family: "Alata";
 }
 header .container .navbar .navbar-brand {
   position: relative;
@@ -118,10 +118,10 @@ header .hero p {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  font-family: "Josefin Sans", sans-serif;
 }
 #products .container h3 {
   font-size: 1.9rem;
+  font-family: "Josefin Sans", sans-serif;
 }
 #products .container .grid-container {
   display: grid;
@@ -138,9 +138,11 @@ header .hero p {
   font-size: 1.3em;
   color: hsl(0, 0%, 100%);
   z-index: 10;
+  font-family: "Josefin Sans", sans-serif;
 }
 #products .container .grid-container .grid-item p .break {
   display: block;
+  font-family: "Josefin Sans", sans-serif;
 }
 #products .container .grid-btn {
   font-family: "Alata";
@@ -155,6 +157,7 @@ header .hero p {
 #support {
   width: 100%;
   background-color: hsl(0, 0%, 0%);
+  font-family: "Alata", sans-serif;
 }
 #support .container {
   display: flex;
@@ -169,7 +172,7 @@ header .hero p {
   padding: 0;
 }
 #support .container .footer-menu .footer-item {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 #support .container .footer-menu .footer-item a {
   color: hsl(0, 0%, 100%);
