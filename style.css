@@ -110,6 +110,45 @@ header .hero p {
   color: hsl(0, 0%, 55%);
   padding: 0 20px;
 }
+#products .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-family: "Josefin Sans", sans-serif;
+}
+#products .container h3 {
+  font-size: 1.9rem;
+}
+#products .container .grid-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+#products .container .grid-container .grid-item {
+  position: relative;
+}
+#products .container .grid-container .grid-item p {
+  position: absolute;
+  left: 20px;
+  bottom: 0;
+  font-size: 1.3em;
+  color: hsl(0, 0%, 100%);
+  z-index: 10;
+  /* Break text into two lines without using a br tag */
+  width: 28%;
+}
+#products .container .grid-btn {
+  font-family: "Alata";
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 10px;
+  border-radius: 0;
+  border: 1px solid hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 0%);
+  padding: 15px 45px;
+}
 .attribution {
   font-size: 11px;
   text-align: center;

@@ -144,6 +144,55 @@ header {
 	}
 }
 
+#products {
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 30px;
+		font-family:"Josefin Sans", sans-serif;
+
+
+		h3 {
+			font-size: 1.9rem;
+		}
+
+		.grid-container {
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
+			gap: 20px;
+
+			.grid-item {
+				position: relative;
+
+				p {
+					position: absolute;
+					left: 20px;
+					bottom: 0;
+					font-size: 1.3em;
+					color: @White;
+					z-index: 10;
+					/* Break text into two lines without using a br tag */
+					width: 28%;
+				}
+			}
+		}
+
+		.grid-btn {
+			font-family: "Alata";
+			font-size: 1.1em;
+			font-weight: bold;
+			letter-spacing: 10px;
+			border-radius: 0;
+			border: 1px solid @Black;
+			color: @Black;
+			padding: 15px 45px;
+		}
+	
+	}
+}
+
 .attribution {
 	font-size: 11px;
 	text-align: center;
