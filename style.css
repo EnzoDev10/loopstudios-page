@@ -106,12 +106,19 @@ header .hero p {
   flex-direction: column;
   gap: 50px;
 }
-#about .container h1 {
+#about .container .about-text {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#about .container .about-text h1 {
   font-size: 1.9rem;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
 }
-#about .container p {
+#about .container .about-text p {
   color: hsl(0, 0%, 55%);
   padding: 0 20px;
 }
@@ -231,9 +238,33 @@ header .hero p {
     text-decoration: none;
   }
   header .container .hero {
-    width: 450px;
+    width: 60%;
   }
   header .container .hero p {
     font-size: 3rem;
+  }
+  #about {
+    margin: 150px 0;
+  }
+  #about .container {
+    position: relative;
+  }
+  #about .container img {
+    width: 70%;
+  }
+  #about .container .about-text {
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    z-index: 10;
+    padding: 100px 80px 0 80px;
+  }
+  #about .container .about-text h1 {
+    font-size: 3.8rem;
+  }
+  #about .container .about-text p {
+    padding: 0;
   }
 }
