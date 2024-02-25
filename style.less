@@ -4,7 +4,7 @@
 @Black: hsl(0, 0%, 0%);
 @Dark-Gray: hsl(0, 0%, 55%);
 @Very-Dark-Gray: hsl(0, 0%, 41%);
-@Attribute-color:hsl(305, 53%, 37%);
+@attribute-color: hsl(305, 53%, 37%);
 
 /* General Styles */
 
@@ -20,10 +20,6 @@ body {
 	width: 100vw;
 	height: 100vh;
 	overflow-x: hidden;
-}
-
-.container {
-	padding: 0 20px;
 }
 
 .logo {
@@ -42,35 +38,41 @@ header {
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
-	height: 100vh;
 	margin-bottom: 80px;
+	height: 500px;
 
 	.container {
 		padding-top: 20px;
 		position: relative;
-		height: 70%;
+		height: 100%;
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: center;
 
 		.navbar {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			padding: 20px 10px;
 			display: flex;
 			justify-content: space-between;
+			align-items: center;
 
 			.navbar-brand {
 				position: relative;
 				z-index: 20;
 			}
 
-			.menu-list {
-				display: none;
-			}
-
 			.menu-btn {
 				all: unset;
 				position: relative;
 				z-index: 20;
+			}
+
+			.nav-desktop {
+				display: none;
 			}
 		}
 
@@ -89,7 +91,7 @@ header {
 			display: flex;
 			align-items: center;
 
-			.menu-list {
+			.nav-mobile {
 				list-style: none;
 				font-size: 2rem;
 				display: flex;
@@ -112,13 +114,14 @@ header {
 
 	.hero {
 		width: 100%;
+		border: 2px solid @White;
+
 
 		p {
 			color: @White;
 			font-family: "Josefin Sans";
 			font-size: 2rem;
 			font-weight: 300;
-			border: 2px solid @White;
 			padding: 15px;
 		}
 	}
@@ -146,7 +149,6 @@ header {
 }
 
 #products {
-
 	.container {
 		display: flex;
 		flex-direction: column;
@@ -157,7 +159,6 @@ header {
 		h3 {
 			font-size: 1.9rem;
 			font-family: "Josefin Sans", sans-serif;
-
 		}
 
 		.grid-container {
@@ -177,11 +178,9 @@ header {
 					z-index: 10;
 					font-family: "Josefin Sans", sans-serif;
 
-
 					.break {
 						display: block;
 						font-family: "Josefin Sans", sans-serif;
-
 					}
 				}
 			}
@@ -211,18 +210,17 @@ header {
 		justify-content: center;
 		align-items: center;
 		gap: 25px;
-		
+
 		.footer-menu {
 			list-style: none;
 			text-align: center;
 			padding: 0;
-			
 
 			.footer-item {
 				margin-bottom: 20px;
 
 				a {
-					color:@White;
+					color: @White;
 					text-decoration: none;
 				}
 			}
@@ -236,12 +234,10 @@ header {
 		.copy {
 			color: @Dark-Gray;
 		}
-
-
 	}
 }
 
- .attribution {
+.attribution {
 	padding-bottom: 20px;
 	width: 90%;
 	text-align: center;
@@ -267,5 +263,39 @@ header {
 .attribution a:focus {
 	outline: thin dotted;
 	color: @White;
-	box-shadow: inset 200px 0 0 0 @Attribute-color;
+	box-shadow: inset 200px 0 0 0 @attribute-color;
+}
+
+@media screen and (min-width: 768px) {
+	header {
+		background-image: url(images/desktop/image-hero.jpg);
+
+		.container {
+			.navbar {
+				.menu-btn {
+					display: none;
+				}
+
+				.nav-desktop {
+					display: flex;
+					gap: 15px;
+					margin: 0;
+					list-style: none;
+
+					a {
+						color: @White;
+						text-decoration: none;
+					}
+				}
+			}
+
+			.hero {
+				width: 450px;
+
+				p {
+					font-size: 3rem;
+				}
+			}
+		}
+	}
 }

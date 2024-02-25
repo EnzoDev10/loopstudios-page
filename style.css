@@ -12,9 +12,6 @@ body {
   height: 100vh;
   overflow-x: hidden;
 }
-.container {
-  padding: 0 20px;
-}
 .logo {
   color: hsl(0, 0%, 100%);
   font-size: 1.7rem;
@@ -27,33 +24,39 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  height: 100vh;
   margin-bottom: 80px;
+  height: 500px;
 }
 header .container {
   padding-top: 20px;
   position: relative;
-  height: 70%;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 header .container .navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 20px 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 header .container .navbar .navbar-brand {
   position: relative;
   z-index: 20;
 }
-header .container .navbar .menu-list {
-  display: none;
-}
 header .container .navbar .menu-btn {
   all: unset;
   position: relative;
   z-index: 20;
+}
+header .container .navbar .nav-desktop {
+  display: none;
 }
 header .container .menu {
   display: none;
@@ -69,7 +72,7 @@ header .container .menu.active {
   display: flex;
   align-items: center;
 }
-header .container .menu.active .menu-list {
+header .container .menu.active .nav-mobile {
   list-style: none;
   font-size: 2rem;
   display: flex;
@@ -78,7 +81,7 @@ header .container .menu.active .menu-list {
   gap: 15px;
   padding-left: 15px;
 }
-header .container .menu.active .menu-list a {
+header .container .menu.active .nav-mobile a {
   color: hsl(0, 0%, 100%);
   text-decoration: none;
   font-family: "Josefin Sans", sans-serif;
@@ -88,13 +91,13 @@ header .container .menu.active .menu-list a {
 }
 header .hero {
   width: 100%;
+  border: 2px solid hsl(0, 0%, 100%);
 }
 header .hero p {
   color: hsl(0, 0%, 100%);
   font-family: "Josefin Sans";
   font-size: 2rem;
   font-weight: 300;
-  border: 2px solid hsl(0, 0%, 100%);
   padding: 15px;
 }
 /* About */
@@ -209,4 +212,28 @@ header .hero p {
   outline: thin dotted;
   color: hsl(0, 0%, 100%);
   box-shadow: inset 200px 0 0 0 hsl(305, 53%, 37%);
+}
+@media screen and (min-width: 768px) {
+  header {
+    background-image: url(images/desktop/image-hero.jpg);
+  }
+  header .container .navbar .menu-btn {
+    display: none;
+  }
+  header .container .navbar .nav-desktop {
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    list-style: none;
+  }
+  header .container .navbar .nav-desktop a {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+  }
+  header .container .hero {
+    width: 450px;
+  }
+  header .container .hero p {
+    font-size: 3rem;
+  }
 }

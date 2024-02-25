@@ -2,7 +2,7 @@ const menu = document.querySelector(".menu");
 const menuToggle = document.querySelector(".menu-btn");
 const menuIcon = menuToggle.querySelector("img");
 
-const links = document.querySelectorAll(".nav-item");
+const links = document.querySelectorAll(".nav-item-mob");
 
 
 menuToggle.addEventListener("click", () => {
