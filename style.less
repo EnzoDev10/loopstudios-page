@@ -158,6 +158,7 @@ header {
 
 #products {
 	.container {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -170,6 +171,7 @@ header {
 		}
 
 		.grid-container {
+			width: 100%;
 			display: grid;
 			grid-template-columns: repeat(1, 1fr);
 			gap: 20px;
@@ -181,7 +183,7 @@ header {
 					position: absolute;
 					left: 20px;
 					bottom: 0;
-					font-size: 1.3em;
+					font-size: 1.5em;
 					color: @White;
 					z-index: 10;
 					font-family: "Josefin Sans", sans-serif;
@@ -196,13 +198,13 @@ header {
 
 		.grid-btn {
 			font-family: "Alata";
-			font-size: 1.1em;
 			font-weight: bold;
-			letter-spacing: 10px;
+			font-size: 12px;
+			letter-spacing: 5px;
 			border-radius: 0;
 			border: 1px solid @Black;
 			color: @Black;
-			padding: 15px 45px;
+			padding: 10px 20px;
 		}
 	}
 }
@@ -335,6 +337,30 @@ header {
 				p {
 					font-size: 12px;
 					padding: 0;
+				}
+			}
+		}
+	}
+
+	#products {
+		margin: 100px 0;
+		.container {
+			h3 {
+				align-self: flex-start;
+			}
+
+			.grid-container {
+				grid-template-columns: repeat(4, 1fr);
+			}
+
+			.grid-btn {
+				position: absolute;
+				top: 0;
+				right: 12px;
+
+				&:hover {
+					background-color: @Black;
+					color:@White;
 				}
 			}
 		}

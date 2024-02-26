@@ -124,6 +124,7 @@ header .hero p {
   padding: 0 20px;
 }
 #products .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -135,6 +136,7 @@ header .hero p {
   font-family: "Josefin Sans", sans-serif;
 }
 #products .container .grid-container {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 20px;
@@ -146,7 +148,7 @@ header .hero p {
   position: absolute;
   left: 20px;
   bottom: 0;
-  font-size: 1.3em;
+  font-size: 1.5em;
   color: hsl(0, 0%, 100%);
   z-index: 10;
   font-family: "Josefin Sans", sans-serif;
@@ -157,13 +159,13 @@ header .hero p {
 }
 #products .container .grid-btn {
   font-family: "Alata";
-  font-size: 1.1em;
   font-weight: bold;
-  letter-spacing: 10px;
+  font-size: 12px;
+  letter-spacing: 5px;
   border-radius: 0;
   border: 1px solid hsl(0, 0%, 0%);
   color: hsl(0, 0%, 0%);
-  padding: 15px 45px;
+  padding: 10px 20px;
 }
 #support {
   width: 100%;
@@ -267,6 +269,24 @@ header .hero p {
   #about .container .about-text p {
     font-size: 12px;
     padding: 0;
+  }
+  #products {
+    margin: 100px 0;
+  }
+  #products .container h3 {
+    align-self: flex-start;
+  }
+  #products .container .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  #products .container .grid-btn {
+    position: absolute;
+    top: 0;
+    right: 12px;
+  }
+  #products .container .grid-btn:hover {
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
   }
 }
 @media screen and (min-width: 1024px) {
