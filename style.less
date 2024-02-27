@@ -27,6 +27,15 @@ body {
 	font-size: 1.7rem;
 }
 
+.hover-effect {
+	transition: transform 200ms;
+
+	&:hover {
+		transform: scale(1.2);
+	}
+
+}
+
 /* _ */
 
 /* Header */
@@ -178,6 +187,7 @@ header {
 
 			.grid-item {
 				position: relative;
+				transition: transform 200ms;
 
 				picture {
 					width: 100%;
@@ -200,6 +210,10 @@ header {
 						display: block;
 						font-family: "Josefin Sans", sans-serif;
 					}
+				}
+
+				&:hover {
+					transform: translateY(-15px);
 				}
 			}
 		}
@@ -298,7 +312,6 @@ header {
 @media screen and (min-width: 768px) {
 	header {
 		background-image: url(images/desktop/image-hero.jpg);
-
 		.container {
 			.navbar {
 				.menu-btn {
@@ -311,9 +324,16 @@ header {
 					margin: 0;
 					list-style: none;
 
-					a {
-						color: @White;
-						text-decoration: none;
+					.nav-item {
+						transition: transform 200ms;
+
+						a {
+							color: @White;
+							text-decoration: none;
+						}
+						&:hover {
+							transform: scale(1.2);
+						}
 					}
 				}
 			}
@@ -413,7 +433,6 @@ header {
 			.grid-container {
 				.grid-item {
 					p {
-						
 						font-size: 2.2rem;
 					}
 				}
