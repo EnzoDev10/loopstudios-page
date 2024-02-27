@@ -29,13 +29,12 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
   margin-bottom: 80px;
   height: 500px;
+  position: relative;
 }
 header .container {
   padding-top: 20px;
-  position: relative;
   height: 100%;
   width: 100%;
   display: flex;
