@@ -179,6 +179,14 @@ header {
 			.grid-item {
 				position: relative;
 
+				picture {
+					width: 100%;
+
+					img {
+						width: 100%;
+					}
+				}
+
 				p {
 					position: absolute;
 					left: 20px;
@@ -221,10 +229,17 @@ header {
 		align-items: center;
 		gap: 25px;
 
+		.logo {
+			margin-bottom: 25px;
+		}
+
 		.footer-menu {
+			display: flex;
+			flex-direction: column;
 			list-style: none;
 			text-align: center;
 			padding: 0;
+			margin-bottom: 0;
 
 			.footer-item {
 				margin-bottom: 20px;
@@ -238,7 +253,10 @@ header {
 
 		.socials {
 			display: flex;
+			justify-content: center;
+			align-items: center;
 			gap: 15px;
+			margin-bottom: 15px;
 		}
 
 		.copy {
@@ -249,7 +267,8 @@ header {
 
 .attribution {
 	padding-bottom: 20px;
-	width: 90%;
+	width: 100%;
+	margin: 10px auto;
 	text-align: center;
 	letter-spacing: 2px;
 	font-weight: 700;
@@ -350,6 +369,7 @@ header {
 			}
 
 			.grid-container {
+				width: 100%;
 				grid-template-columns: repeat(4, 1fr);
 			}
 
@@ -360,7 +380,7 @@ header {
 
 				&:hover {
 					background-color: @Black;
-					color:@White;
+					color: @White;
 				}
 			}
 		}
@@ -387,20 +407,50 @@ header {
 			}
 		}
 	}
-}
 
-@media screen and (min-width: 1440px) {
-	/* Desktop: #about +h1 font size,+p font size, +.about-text padding top and left  */
-
-	#about {
+	#products {
 		.container {
-			.about-text {
-				padding-left: 90px;
-				padding-top: 90px;
-				font-size: 16px;
+			.grid-container {
+				.grid-item {
+					p {
+						left:40px;
+						
+						font-size: 2.3rem;
+					}
+				}
+			}
+		}
+	}
 
-				h1 {
-					font-size: 4rem;
+	#support {
+		.container {
+			flex-direction: row;
+			justify-content: space-between;
+
+			.footer-menu {
+				flex-direction: row;
+				gap: 30px;
+			}
+
+			.socials {
+				justify-content: flex-end;
+			}
+		}
+	}
+
+	@media screen and (min-width: 1440px) {
+		/* Desktop: #about +h1 font size,+p font size, +.about-text padding top and left  */
+
+		#about {
+			.container {
+				.about-text {
+					padding-left: 90px;
+					padding-top: 90px;
+					font-size: 16px;
+
+					h1 {
+						font-size: 4rem;
+					}
 				}
 			}
 		}

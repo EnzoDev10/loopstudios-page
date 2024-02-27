@@ -144,6 +144,12 @@ header .hero p {
 #products .container .grid-container .grid-item {
   position: relative;
 }
+#products .container .grid-container .grid-item picture {
+  width: 100%;
+}
+#products .container .grid-container .grid-item picture img {
+  width: 100%;
+}
 #products .container .grid-container .grid-item p {
   position: absolute;
   left: 20px;
@@ -179,10 +185,16 @@ header .hero p {
   align-items: center;
   gap: 25px;
 }
+#support .container .logo {
+  margin-bottom: 25px;
+}
 #support .container .footer-menu {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   text-align: center;
   padding: 0;
+  margin-bottom: 0;
 }
 #support .container .footer-menu .footer-item {
   margin-bottom: 20px;
@@ -193,14 +205,18 @@ header .hero p {
 }
 #support .container .socials {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 15px;
+  margin-bottom: 15px;
 }
 #support .container .copy {
   color: hsl(0, 0%, 55%);
 }
 .attribution {
   padding-bottom: 20px;
-  width: 90%;
+  width: 100%;
+  margin: 10px auto;
   text-align: center;
   letter-spacing: 2px;
   font-weight: 700;
@@ -277,6 +293,7 @@ header .hero p {
     align-self: flex-start;
   }
   #products .container .grid-container {
+    width: 100%;
     grid-template-columns: repeat(4, 1fr);
   }
   #products .container .grid-btn {
@@ -302,9 +319,23 @@ header .hero p {
   #about .container .about-text p {
     font-size: 1em;
   }
+  #products .container .grid-container .grid-item p {
+    left: 40px;
+    font-size: 2.3rem;
+  }
+  #support .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #support .container .footer-menu {
+    flex-direction: row;
+    gap: 30px;
+  }
+  #support .container .socials {
+    justify-content: flex-end;
+  }
 }
-@media screen and (min-width: 1440px) {
-  /* Desktop: #about +h1 font size,+p font size, +.about-text padding top and left  */
+@media screen and (min-width: 1024px) and screen and (min-width: 1440px) {
   #about .container .about-text {
     padding-left: 90px;
     padding-top: 90px;
