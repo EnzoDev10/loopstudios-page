@@ -320,8 +320,7 @@ header .hero p {
     font-size: 1em;
   }
   #products .container .grid-container .grid-item p {
-    left: 40px;
-    font-size: 2.3rem;
+    font-size: 2.2rem;
   }
   #support .container {
     flex-direction: row;
