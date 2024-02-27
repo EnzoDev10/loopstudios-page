@@ -335,7 +335,7 @@ header .hero p {
     justify-content: flex-end;
   }
 }
-@media screen and (min-width: 1024px) and screen and (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
   #about .container .about-text {
     padding-left: 90px;
     padding-top: 90px;
